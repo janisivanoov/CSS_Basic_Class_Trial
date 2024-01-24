@@ -1,0 +1,100 @@
+div {
+	background-color:red;
+	width: 100px;
+	height: 60px;
+}
+.styling {
+    color: blue;
+    font-size: 23px;
+}
+div:hover {
+	background-color: blue
+}
+.limonchik {
+	width: 200px; /* Указываем ширину и высоту объекта */
+	height: 200px; 
+	background: #F5F240; /* Указываем задний фон - желтый */
+	border: 2px solid #F0D900; /* Обводка 2 пикселя */
+	border-radius: 10px 150px 30px 150px; /* Скругление углов */
+}
+.borders {
+    width: 0; height: 0;
+    border: 100px solid;
+    border-color: #FF5B45 #1D532A #6DCDF7 #FFE02E;
+}
+div {
+	float: left;
+}
+#first {
+	background: #e56868;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+#second {
+	background: #6db8e3;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	top: -50px;
+	right: -50px;
+}
+<ul id="navbar">
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Контакты</a>
+    <ul>
+      <li><a href="#">Адрес</a></li>
+      <li><a href="#">Телефон</a></li>
+      <li><a href="#">Email</a></li>
+    </ul>
+  </li>
+  <li><a href="#">О нас</a></li>
+</ul>
+Здесь все просто. Есть один список и в нем вложен еще один список, который будет раскрываться при наведении мыши на нужную ячейку меню. Теперь давайте рассмотрим весь CSS код:
+
+#navbar ul{
+	display: none;
+	background-color: #f90;
+	position: absolute;
+	top: 100%;
+}
+
+#navbar li:hover ul {
+	display: block;
+}
+
+#navbar, #navbar ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navbar {
+	height: 30px;
+	background-color: #666;
+	padding-left: 25px;
+	min-width: 470px;
+}
+
+#navbar li {
+	float: left;
+	position: relative;
+	height: 100%;
+}
+
+#navbar li a {
+	display: block;
+	padding: 6px;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+#navbar ul li { float: none; }
+
+#navbar li:hover { background-color: #f90; }
+
+#navbar ul li:hover { background-color: #666; }
